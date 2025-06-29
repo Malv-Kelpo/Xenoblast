@@ -69,6 +69,12 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
+            // Prevents player from shooting if they have iframes active
+            if (iFrameActive)
+            {
+                return;
+            }
+            
             // Spawns bullet slightly in front of player
             Vector2 bulletPosition = rb.position + lookDirection * 0.5f;
 
@@ -95,7 +101,6 @@ public class PlayerController : MonoBehaviour
     {
         if (iFrameActive)
         {
-            Debug.Log("IFrames active. Time remaining: " + (iFrameDuration - iFrameTimer));
             return;
         }
 
@@ -109,6 +114,8 @@ public class PlayerController : MonoBehaviour
 
         iFrameActive = true;
         iFrameTimer = iFrameDuration;
+
+        // Flashing effect
     }
 
     private void Die()

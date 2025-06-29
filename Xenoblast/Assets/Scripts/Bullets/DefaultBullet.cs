@@ -23,11 +23,11 @@ public class DefaultBullet : BulletBase
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || other.CompareTag("Boundary"))
         {
-            // Destroys bullet when it hits an enemy
+            // Destroys bullet when it hits an enemy or the boundaries of the map
             Destroy(gameObject);
-            Debug.Log("Hit Enemy");
+            
         }
         
     }

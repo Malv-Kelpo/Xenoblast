@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - Boundary
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3335324485
+    locked: 0
+  - name: Tilemap
+    uniqueID: 2503190709
+    locked: 0
+  - name: UI
+    uniqueID: 3557726809
+    locked: 0
+  - name: Player
+    uniqueID: 755013721
     locked: 0
   m_RenderingLayers:
   - Default

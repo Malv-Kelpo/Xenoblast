@@ -3,7 +3,7 @@ using UnityEngine;
 public class DefaultEnemy : EnemyBase
 {
     [SerializeField] private float speed = 1f;
-    [SerializeField] private Transform player;
+    [SerializeField] private PlayerController player;
     Vector2 moveDirection;
 
     private Rigidbody2D rb;
@@ -11,6 +11,17 @@ public class DefaultEnemy : EnemyBase
     {
         rb = GetComponent<Rigidbody2D>();
         maxHealth = 1;
+
+        // Find the player automatically if not assigned
+        if (player == null)
+        {
+            GameObject playerObj = GameObject.FindWithTag("Player");
+            if (playerObj != null)
+            {
+                player = playerObj.GetComponent<PlayerController>();
+            }
+        }
+
         base.Start();
     }
 
@@ -19,7 +30,14 @@ public class DefaultEnemy : EnemyBase
         // movement toward player
         if (player)
         {
-            Vector3 direction = (player.position - transform.position).normalized;
+            Vector3 direction = (player.transform.position - transform.position).normalized;
+
+            // If the player has iFrames, reverse the direction
+            if (player.iFrameActive)
+            {
+                direction = -direction;
+            }
+            
             moveDirection = direction;
         }
     }

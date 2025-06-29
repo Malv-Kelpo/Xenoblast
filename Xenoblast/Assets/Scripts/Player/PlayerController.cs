@@ -18,7 +18,10 @@ public class PlayerController : MonoBehaviour
     [Header("Health")]
     [SerializeField] private int maxHealth = 3;
     private int currentHealth;
-    private float iFrameDuration = 3f;
+    public bool iFrameActive = false;
+    [SerializeField] private float iFrameDuration = 3f;
+    private float iFrameTimer = 0f;
+    
 
     // =========== Animation ===========
     // variables for animation
@@ -41,6 +44,15 @@ public class PlayerController : MonoBehaviour
         {
             lookDirection = moveInput.normalized;
         }
+
+        if (iFrameActive)
+        {
+            iFrameTimer -= Time.deltaTime;
+            if (iFrameTimer <= 0f)
+            {
+                iFrameActive = false;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -57,7 +69,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            // Spawns bullet slight in front of player
+            // Spawns bullet slightly in front of player
             Vector2 bulletPosition = rb.position + lookDirection * 0.5f;
 
             GameObject bullet = Instantiate(bulletPrefab, bulletPosition, Quaternion.identity);
@@ -81,15 +93,22 @@ public class PlayerController : MonoBehaviour
 
     private void TakeDamage()
     {
+        if (iFrameActive)
+        {
+            Debug.Log("IFrames active. Time remaining: " + (iFrameDuration - iFrameTimer));
+            return;
+        }
+
         currentHealth -= 1;
         Debug.Log("Player took 1 damage. Current Health: " + currentHealth);
-
-        // Add iFrame functionality
 
         if (currentHealth <= 0)
         {
             Die();
         }
+
+        iFrameActive = true;
+        iFrameTimer = iFrameDuration;
     }
 
     private void Die()
@@ -97,4 +116,6 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);
         Debug.Log("Player is dead");
     }
+
+    
 }

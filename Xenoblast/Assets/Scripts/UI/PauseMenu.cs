@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class ExplosiveBullet : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
-    //[SerializeField] private float blastRadius = 2f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

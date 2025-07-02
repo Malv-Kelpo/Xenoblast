@@ -30,6 +30,7 @@ public abstract class EnemyBase : MonoBehaviour
     protected virtual void Die()
     {
         Destroy(gameObject);
+        GameManager.gameManagerInstance.AddScore(1);
         Debug.Log("Enemy died");
     }
 }

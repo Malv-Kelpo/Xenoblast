@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManagerInstance;
     public int score;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
         score = 0;

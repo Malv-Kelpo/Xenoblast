@@ -41,9 +41,9 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected virtual void EnemyMovement()
     {
-        // movement toward player
         if (player)
         {
+            // Default movement where the enemy moves straight to the player
             Vector3 direction = (player.transform.position - transform.position).normalized;
 
             // If the player has iFrames, reverse the direction

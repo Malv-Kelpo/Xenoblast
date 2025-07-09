@@ -41,7 +41,10 @@ public class EnemySpawnerManager : MonoBehaviour
 
         GameObject enemy = SelectEnemy();
 
-        Instantiate(enemy, spawnPoint.position, Quaternion.identity);
+        GameObject enemyInstance = Instantiate(enemy, spawnPoint.position, Quaternion.identity);
+        EnemyBase enemyScript = enemyInstance.GetComponent<EnemyBase>();
+
+        Debug.Log(enemyScript.enemyLabel + " Enemy spawned");
     }
 
     private GameObject SelectEnemy()

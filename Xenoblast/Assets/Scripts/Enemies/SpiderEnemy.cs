@@ -10,6 +10,7 @@ public class SpiderEnemy : EnemyBase
 
     protected override void Awake()
     {
+        enemyLabel = "Spider";
         base.Awake();
     }
     protected override void Start()

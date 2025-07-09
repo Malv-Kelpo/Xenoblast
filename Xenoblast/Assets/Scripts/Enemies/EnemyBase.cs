@@ -3,9 +3,13 @@ using UnityEngine;
 public abstract class EnemyBase : MonoBehaviour
 {
     [Header("Enemy Stats")]
+    [SerializeField] public string enemyLabel;
     [SerializeField] public int maxHealth;
     protected int currentHealth;
     [SerializeField] protected float speed;
+
+    [Header("Items Dropped")]
+    [SerializeField] protected GameObject[] itemPrefabs;
 
     protected Rigidbody2D rb;
     protected Vector2 moveDirection;
@@ -78,9 +82,33 @@ public abstract class EnemyBase : MonoBehaviour
         }
     }
 
+    protected virtual void DropItem()
+    {
+        if (itemPrefabs == null || itemPrefabs.Length == 0)
+        {
+            Debug.LogWarning("No items in itemPrefabs array.");
+            return;
+        }
+
+        GameObject itemDropped = itemPrefabs[Random.Range(0, itemPrefabs.Length)];
+        Vector2 dropPosition = transform.position;
+        Instantiate(itemDropped, dropPosition, Quaternion.identity);
+
+        ItemBase itemDroppedScript = itemDropped.GetComponent<ItemBase>();
+        Debug.Log(itemDroppedScript.itemLabel + " Item dropped");
+    }
+
     protected virtual void Die()
     {
         Destroy(gameObject);
+
+        // 20% of the enemy dropping an item when they die
+        float itemDropChance = Random.value;
+        if (itemDropChance <= 0.20f)
+        {
+            DropItem();
+        }
+
         GameManager.gameManagerInstance.AddScore(1);
         Debug.Log("Enemy died");
     }

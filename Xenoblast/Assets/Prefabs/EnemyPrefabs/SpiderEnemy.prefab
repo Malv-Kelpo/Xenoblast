@@ -197,8 +197,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aebdd08eb6757406186bc451782fe213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  speed: 0
+  enemyLabel: Spider
+  maxHealth: 1
+  speed: 4
+  itemPrefabs:
+  - {fileID: 103337722435090582, guid: b9e3b4d076a4b4457966130cdb4c5e04, type: 3}
   player: {fileID: 0}
   zigZagDuration: 0.75
   zigZagAmount: 1

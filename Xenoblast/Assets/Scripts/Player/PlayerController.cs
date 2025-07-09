@@ -1,3 +1,4 @@
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -6,7 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     // =========== Movement ===========
     [Header("Movement")]
-    [SerializeField] private float speed = 5f;
+    [SerializeField] public float defaultSpeed = 5f;
+    private float currentSpeed;
     private Vector2 moveInput;
 
     // =========== Shooting ===========
@@ -21,7 +23,12 @@ public class PlayerController : MonoBehaviour
     public bool iFrameActive = false;
     [SerializeField] private float iFrameDuration = 3f;
     private float iFrameTimer = 0f;
-    
+
+    // =========== Items ===========
+    [Header("Items")]
+    public bool itemEquipped = false;
+    private float itemTimer = 0f;
+    private ItemBase activeItem;
 
     // =========== Animation ===========
     // variables for animation
@@ -34,7 +41,12 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
         currentHealth = maxHealth;
+        currentSpeed = defaultSpeed;
     }
 
     void Update()
@@ -53,11 +65,22 @@ public class PlayerController : MonoBehaviour
                 iFrameActive = false;
             }
         }
+
+        if (itemEquipped)
+        {
+            itemTimer -= Time.deltaTime;
+            Debug.Log("Item Timer: " + itemTimer);
+            if (itemTimer <= 0f)
+            {
+                SetPlayerDefaultSettings();
+                Debug.Log("Item Duration done");
+            }
+        }
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = moveInput * speed;
+        rb.linearVelocity = moveInput * currentSpeed;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -74,7 +97,7 @@ public class PlayerController : MonoBehaviour
             {
                 return;
             }
-            
+
             // Spawns bullet slightly in front of player
             Vector2 bulletPosition = rb.position + lookDirection * 0.5f;
 
@@ -97,6 +120,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void UseItem(ItemBase item, float duration)
+    {
+        itemEquipped = true;
+        if (activeItem != null)
+        {
+            Debug.Log("Replacing previous item");
+        }
+
+        activeItem = item;
+        itemTimer = duration;
+
+        item.ItemAbility();  // Call the item's ability logic
+
+    }
     private void TakeDamage()
     {
         if (iFrameActive)
@@ -124,5 +161,20 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player is dead");
     }
 
-    
+    public float GetCurrentSpeed()
+    {
+        return currentSpeed;
+    }
+
+    public void SetCurrentSpeed(float amount)
+    {
+        currentSpeed = amount;
+    }
+
+    public void SetPlayerDefaultSettings()
+    {
+        // Will add on when more settings are completed
+        SetCurrentSpeed(defaultSpeed);
+        itemEquipped = false;
+    }
 }

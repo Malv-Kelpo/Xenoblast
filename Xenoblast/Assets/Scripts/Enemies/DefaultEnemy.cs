@@ -4,6 +4,7 @@ public class DefaultEnemy : EnemyBase
 {
     protected override void Awake()
     {
+        enemyLabel = "Default";
         base.Awake();
     }
 

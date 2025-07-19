@@ -107,6 +107,7 @@ public abstract class EnemyBase : MonoBehaviour
         if (itemDropChance <= 0.20f)
         {
             DropItem();
+            
         }
 
         GameManager.gameManagerInstance.AddScore(1);

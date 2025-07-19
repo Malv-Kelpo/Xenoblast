@@ -1,11 +1,13 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class ItemBase : MonoBehaviour
 {
     [Header("Item Stats")]
     [SerializeField] public string itemLabel;
-    protected float itemTimer = 0f;
-    [SerializeField] public float itemDuration;
+    [SerializeField] public float itemAbilityDuration;
+    [SerializeField] public float itemDespawnDuration = 10f;
+    private float itemDespawnTimer = 0f;
 
     [Header("Player")]
     [SerializeField] protected PlayerController player;
@@ -17,16 +19,33 @@ public abstract class ItemBase : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         }
+
+        itemDespawnTimer = itemDespawnDuration;
+    }
+
+    protected virtual void Update()
+    {
+        ItemDespawn();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            player.UseItem(this, itemDuration);
+            player.UseItem(this, itemAbilityDuration);
             Destroy(gameObject);
             Debug.Log(itemLabel + " Item used");
         }
+    }
+
+    void ItemDespawn()
+    {
+        itemDespawnTimer -= Time.deltaTime;
+        if (itemDespawnTimer <= 0f)
+        {
+            Destroy(gameObject);
+            Debug.Log(itemLabel + " Item despawned");
+        } 
     }
 
     public abstract void ItemAbility();

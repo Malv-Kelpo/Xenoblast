@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public bool iFrameActive = false;
     [SerializeField] private float iFrameDuration = 3f;
     private float iFrameTimer = 0f;
+    [SerializeField] private HealthDisplay healthDisplay;
 
     // =========== Items ===========
     [Header("Items")]
@@ -47,6 +48,11 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth = maxHealth;
         currentSpeed = defaultSpeed;
+
+        if (healthDisplay != null)
+        {
+            healthDisplay.UpdateHealthDisplay(currentHealth);
+        }
     }
 
     void Update()
@@ -69,7 +75,6 @@ public class PlayerController : MonoBehaviour
         if (itemEquipped)
         {
             itemTimer -= Time.deltaTime;
-            Debug.Log("Item Timer: " + itemTimer);
             if (itemTimer <= 0f)
             {
                 SetPlayerDefaultSettings();
@@ -143,6 +148,11 @@ public class PlayerController : MonoBehaviour
 
         currentHealth -= 1;
         Debug.Log("Player took 1 damage. Current Health: " + currentHealth);
+
+        if (healthDisplay != null)
+        {
+            healthDisplay.UpdateHealthDisplay(currentHealth);
+        }
 
         if (currentHealth <= 0)
         {

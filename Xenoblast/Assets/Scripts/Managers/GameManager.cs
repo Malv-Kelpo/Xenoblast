@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManagerInstance;
     public int score;
+
+    [SerializeField] private TextMeshProUGUI scoreText;
 
     private void Awake()
     {
@@ -14,12 +17,16 @@ public class GameManager : MonoBehaviour
         if (gameManagerInstance == null)
         {
             gameManagerInstance = this;
-            //DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        UpdateScoreUI();    
     }
 
     public int GetScore()
@@ -36,6 +43,15 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
         Debug.Log("Score: " + score);
+        UpdateScoreUI();
+    }
+
+    private void UpdateScoreUI()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
     }
 
 }

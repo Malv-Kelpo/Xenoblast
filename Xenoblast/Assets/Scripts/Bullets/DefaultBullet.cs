@@ -3,17 +3,11 @@ using UnityEngine.Rendering;
 
 public class DefaultBullet : BulletBase
 {
-    [SerializeField] private float speed = 10f;
-    [SerializeField] private float duration = 3f;
-    
-
-    private Rigidbody2D rb;
-    void Awake()
+    void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         damage = 1;
-        // Bullet destroys itself once the duration ends
-        Destroy(gameObject, duration);
+        speed = 10f;
+        duration = 3f;
     }
 
     public override void Launch(Vector2 direction)

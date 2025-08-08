@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
 
     // =========== Shooting ===========
     [Header("Shooting")]
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject defaultBulletPrefab;
+    private GameObject currentBulletPrefab;
     private Vector2 lookDirection = Vector2.down; // Player looking down by default
 
     // =========== Health ===========
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth = maxHealth;
         currentSpeed = defaultSpeed;
+        currentBulletPrefab = defaultBulletPrefab;
 
         if (healthDisplay != null)
         {
@@ -106,7 +108,7 @@ public class PlayerController : MonoBehaviour
             // Spawns bullet slightly in front of player
             Vector2 bulletPosition = rb.position + lookDirection * 0.5f;
 
-            GameObject bullet = Instantiate(bulletPrefab, bulletPosition, Quaternion.identity);
+            GameObject bullet = Instantiate(currentBulletPrefab, bulletPosition, Quaternion.identity);
 
             BulletBase bulletScript = bullet.GetComponent<BulletBase>();
 
@@ -181,10 +183,21 @@ public class PlayerController : MonoBehaviour
         currentSpeed = amount;
     }
 
+    public GameObject GetBulletPrefab()
+    {
+        return currentBulletPrefab;
+    }
+
+    public void setBulletPrefab(GameObject bullet)
+    {
+        currentBulletPrefab = bullet;
+    }
+
     public void SetPlayerDefaultSettings()
     {
         // Will add on when more settings are completed
         SetCurrentSpeed(defaultSpeed);
+        setBulletPrefab(defaultBulletPrefab);
         itemEquipped = false;
     }
 }

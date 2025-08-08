@@ -90,6 +90,7 @@ public abstract class EnemyBase : MonoBehaviour
             return;
         }
 
+        // FIXME: change probability of item dropping based on score
         GameObject itemDropped = itemPrefabs[Random.Range(0, itemPrefabs.Length)];
         Vector2 dropPosition = transform.position;
         Instantiate(itemDropped, dropPosition, Quaternion.identity);

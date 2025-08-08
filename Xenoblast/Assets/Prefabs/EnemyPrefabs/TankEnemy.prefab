@@ -202,4 +202,5 @@ MonoBehaviour:
   speed: 1.5
   itemPrefabs:
   - {fileID: 103337722435090582, guid: b9e3b4d076a4b4457966130cdb4c5e04, type: 3}
+  - {fileID: 7967180493571725516, guid: 8d74fceace76c4341b6030da5a60f582, type: 3}
   player: {fileID: 0}

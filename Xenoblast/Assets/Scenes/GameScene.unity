@@ -2029,6 +2029,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3075158907320896928, guid: c3145877223b441358d4fd5801ba9808, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7743455186981930481, guid: 3d7fb39c2ec974ec3801f7e2fa3d30a3, type: 3}
+    - target: {fileID: 3075158907320896928, guid: c3145877223b441358d4fd5801ba9808, type: 3}
       propertyPath: healthDisplay
       value: 
       objectReference: {fileID: 1489094695}
@@ -2036,6 +2040,10 @@ PrefabInstance:
       propertyPath: iFrameDuration
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3075158907320896928, guid: c3145877223b441358d4fd5801ba9808, type: 3}
+      propertyPath: defaultBulletPrefab
+      value: 
+      objectReference: {fileID: 4806378656240881907, guid: a55f21bbdb8ca4e2283ad6a1a3f454b7, type: 3}
     - target: {fileID: 3708345200393537321, guid: c3145877223b441358d4fd5801ba9808, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

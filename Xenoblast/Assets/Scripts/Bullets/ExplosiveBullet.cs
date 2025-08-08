@@ -5,8 +5,8 @@ public class ExplosiveBullet : BulletBase
     // Blast Radius of 2f, Damage increased to 3
     //public ItemBase item;
     [SerializeField] private float blastDuration = 0.05f;
-    [SerializeField] private CircleCollider2D impactCollider;
-    [SerializeField] private CircleCollider2D blastCollider;
+    [SerializeField] private CircleCollider2D impactCollider; // Collider to check initial impact with Enemy
+    [SerializeField] private CircleCollider2D blastCollider; // Larger Collider that contains the blast area
      [SerializeField] private SpriteRenderer spriteRenderer;
     private bool hitEnemy = false;
 

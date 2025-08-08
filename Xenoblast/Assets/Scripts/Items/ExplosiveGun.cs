@@ -13,6 +13,7 @@ public class ExplosiveGun : ItemBase
 
     public override void ItemAbility()
     {
+        // Changes Player bulletPrefab to the explosiveBulletPrefab
         PlayerController playerScript = player.GetComponent<PlayerController>();
         playerScript.setBulletPrefab(explosiveBulletPrefab);
     }

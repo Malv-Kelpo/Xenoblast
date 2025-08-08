@@ -8,7 +8,7 @@ public class EnemySpawnerManager : MonoBehaviour
     [SerializeField] private float spawnInterval = 3f;
     private float spawnTimer;
     private int lastScoreTracker = 0;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         spawnTimer = spawnInterval;
@@ -71,7 +71,20 @@ public class EnemySpawnerManager : MonoBehaviour
         }
         else if (currentScore >= 51 && currentScore <= 75)
         {
-            return enemyPrefabs[Random.Range(0, 3)];
+            // 34% of spawning TankEnemy, 33% of spawning SpiderEnemy, 33% of spawning DefaultEnemy
+            if (probability <= 0.34f)
+            {
+                return enemyPrefabs[2];
+            }
+            if (probability >= 0.35f && probability <= 0.66f)
+            {
+                return enemyPrefabs[1];
+            }
+            else
+            {
+                return enemyPrefabs[0];
+            }
+
         }
         else
         {

@@ -19,7 +19,7 @@ public abstract class EnemyBase : MonoBehaviour
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
+        currentHealth = maxHealth; 
 
         // Find the player automatically if not assigned
         if (player == null)

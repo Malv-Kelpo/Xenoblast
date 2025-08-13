@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        AudioManager.Instance.PlayMusic("GameTheme");
     }
 
     private void Start()

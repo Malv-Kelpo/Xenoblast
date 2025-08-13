@@ -3,8 +3,8 @@ using UnityEngine;
 public class ExplosiveBullet : BulletBase
 {
     // Blast Radius of 2f, Damage increased to 3
-    //public ItemBase item;
     [SerializeField] private float blastDuration = 0.05f;
+    [SerializeField] private float blastRadius = 2f;
     [SerializeField] private CircleCollider2D impactCollider; // Collider to check initial impact with Enemy
     [SerializeField] private CircleCollider2D blastCollider; // Larger Collider that contains the blast area
      [SerializeField] private SpriteRenderer spriteRenderer;
@@ -12,6 +12,8 @@ public class ExplosiveBullet : BulletBase
 
     protected override void Awake()
     {
+        blastCollider.enabled = false;
+        blastCollider.radius = blastRadius;
         base.Awake();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,8 +22,6 @@ public class ExplosiveBullet : BulletBase
         damage = 3;
         speed = 10f;
         duration = 3f;
-
-        blastCollider.enabled = false;
     }
 
     public override void Launch(Vector2 direction)
@@ -40,6 +40,7 @@ public class ExplosiveBullet : BulletBase
 
     private void Explode()
     {
+        // Enables blast collider to damage nearby enemies when bullet hits an enemy
         hitEnemy = true;
         blastCollider.enabled = true;
 

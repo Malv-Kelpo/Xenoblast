@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             s.source.Play();
-            Debug.Log(name + " playing");
+            Debug.Log(name + " Music playing");
         }
     }
 
@@ -68,7 +68,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             s.source.Stop();
-            Debug.Log(name + " stopped playing");
+            Debug.Log(name + " Music stopped playing");
         }
     }
 
@@ -83,6 +83,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             s.source.PlayOneShot(s.clip, s.volume);
+            Debug.Log(name + " SFX playing");
         }
     }
 
@@ -97,7 +98,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             s.source.Stop();
-            Debug.Log(name + " stopped playing");
+            Debug.Log(name + " SFX stopped playing");
         }
     }
 

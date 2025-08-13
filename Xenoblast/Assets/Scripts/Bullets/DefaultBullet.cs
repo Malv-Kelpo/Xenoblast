@@ -3,6 +3,11 @@ using UnityEngine.Rendering;
 
 public class DefaultBullet : BulletBase
 {
+    protected override void Awake()
+    {
+        launchSFXName = "DefaultBullet";
+        base.Awake();
+    }
     void Start()
     {
         damage = 1;
@@ -12,6 +17,7 @@ public class DefaultBullet : BulletBase
 
     public override void Launch(Vector2 direction)
     {
+        AudioManager.Instance.PlaySFX(launchSFXName);
         rb.linearVelocity = direction * speed;
     }
 

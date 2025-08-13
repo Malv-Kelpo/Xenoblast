@@ -941,6 +941,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5169483854267728191, guid: fe0198cb20ce641ce81481d910308041, type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169483854267728191, guid: fe0198cb20ce641ce81481d910308041, type: 3}
+      propertyPath: sfxSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 795b2c0c77c08ed4f926b27a8dc072fa, type: 3}
+    - target: {fileID: 5169483854267728191, guid: fe0198cb20ce641ce81481d910308041, type: 3}
+      propertyPath: sfxSounds.Array.data[1].name
+      value: ExplosiveBulletLaunch
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169483854267728191, guid: fe0198cb20ce641ce81481d910308041, type: 3}
+      propertyPath: sfxSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d7b9f7eafee62949b3426b6da4e2091, type: 3}
+    - target: {fileID: 5169483854267728191, guid: fe0198cb20ce641ce81481d910308041, type: 3}
+      propertyPath: sfxSounds.Array.data[2].name
+      value: ExplosiveBulletBlast
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169483854267728191, guid: fe0198cb20ce641ce81481d910308041, type: 3}
+      propertyPath: sfxSounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169483854267728191, guid: fe0198cb20ce641ce81481d910308041, type: 3}
+      propertyPath: sfxSounds.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169483854267728191, guid: fe0198cb20ce641ce81481d910308041, type: 3}
       propertyPath: musicSounds.Array.data[0].volume
       value: 1
       objectReference: {fileID: 0}

@@ -8,12 +8,17 @@ public class ExplosiveBullet : BulletBase
     [SerializeField] private CircleCollider2D impactCollider; // Collider to check initial impact with Enemy
     [SerializeField] private CircleCollider2D blastCollider; // Larger Collider that contains the blast area
      [SerializeField] private SpriteRenderer spriteRenderer;
+    public string blastSFXName;
     private bool hitEnemy = false;
 
     protected override void Awake()
     {
+        launchSFXName = "ExplosiveBulletLaunch";
+        blastSFXName = "ExplosiveBulletBlast";
+
         blastCollider.enabled = false;
         blastCollider.radius = blastRadius;
+        
         base.Awake();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,10 +27,12 @@ public class ExplosiveBullet : BulletBase
         damage = 3;
         speed = 10f;
         duration = 3f;
+        
     }
 
     public override void Launch(Vector2 direction)
     {
+        AudioManager.Instance.PlaySFX(launchSFXName);
         rb.linearVelocity = direction * speed;
     }
 
@@ -40,6 +47,8 @@ public class ExplosiveBullet : BulletBase
 
     private void Explode()
     {
+        AudioManager.Instance.PlaySFX(blastSFXName);
+
         // Enables blast collider to damage nearby enemies when bullet hits an enemy
         hitEnemy = true;
         blastCollider.enabled = true;

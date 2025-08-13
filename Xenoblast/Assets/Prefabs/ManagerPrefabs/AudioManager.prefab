@@ -57,4 +57,22 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  sfxSounds: []
+  sfxSounds:
+  - name: DefaultBullet
+    clip: {fileID: 8300000, guid: ce156a2e5fa59b04ebd0614cd11a0015, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ExplosiveBulletLaunch
+    clip: {fileID: 8300000, guid: 795b2c0c77c08ed4f926b27a8dc072fa, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ExplosiveBulletBlast
+    clip: {fileID: 8300000, guid: 6d7b9f7eafee62949b3426b6da4e2091, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

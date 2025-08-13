@@ -7,6 +7,8 @@ public abstract class BulletBase : MonoBehaviour
     public int damage;
     [SerializeField] protected float speed;
     [SerializeField] protected float duration;
+    public string launchSFXName;
+
     protected Rigidbody2D rb;
 
     protected virtual void Awake()

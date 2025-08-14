@@ -32,8 +32,10 @@ public class PlayerController : MonoBehaviour
     private float itemTimer = 0f;
     private ItemBase activeItem;
 
-    // =========== Animation ===========
-    // variables for animation
+    // =========== Sprites ===========
+    [Header("Sprites")]
+    // Order: Up, Up-Left, Left, Down-Left, Down, Down-Right, Right, Up-Right
+    public Sprite[] bulletSprites;
 
     // =========== Components ===========
     private Rigidbody2D rb;
@@ -95,6 +97,44 @@ public class PlayerController : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
     }
 
+    private int GetDirectionIndex(Vector2 dir)
+    {
+        dir.Normalize();
+
+        if (dir == Vector2.up) // Up
+        {
+            return 0;
+        }
+        else if (dir == new Vector2(-1, 1).normalized) // Up-Left
+        {
+            return 1;
+        }
+        else if (dir == Vector2.left) // Left
+        {
+            return 2;
+        }
+        else if (dir == new Vector2(-1, -1).normalized) // Down-Left
+        {
+            return 3;
+        }
+        else if (dir == Vector2.down) // Down
+        {
+            return 4;
+        }
+        else if (dir == new Vector2(1, -1).normalized) // Down-Right
+        {
+            return 5;
+        }
+        else if (dir == Vector2.right) // Right
+        {
+            return 6;
+        }
+        else // Up-Right
+        {
+            return 7;
+        }
+    }
+
     public void Shoot(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -110,6 +150,15 @@ public class PlayerController : MonoBehaviour
 
             GameObject bullet = Instantiate(currentBulletPrefab, bulletPosition, Quaternion.identity);
 
+            // Select correct sprite
+            SpriteRenderer sr = bullet.GetComponent<SpriteRenderer>();
+            int dirIndex = GetDirectionIndex(lookDirection);
+
+            if (sr != null && bulletSprites.Length == 8)
+            {
+                sr.sprite = bulletSprites[dirIndex];
+            }
+
             BulletBase bulletScript = bullet.GetComponent<BulletBase>();
 
             if (bulletScript != null)
@@ -118,6 +167,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {

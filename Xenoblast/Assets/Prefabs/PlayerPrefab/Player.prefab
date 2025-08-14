@@ -169,6 +169,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 44048562-6126-4d74-82ad-133ef903233d
     m_ActionName: 'Gameplay/Shoot[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 529275a1-d9ac-44fa-937e-152c18424539
+    m_ActionName: 'UI/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -186,11 +190,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10baaea871cc409985f9f74a5437f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  bulletPrefab: {fileID: 4806378656240881907, guid: a55f21bbdb8ca4e2283ad6a1a3f454b7, type: 3}
+  defaultSpeed: 5
+  defaultBulletPrefab: {fileID: 0}
   maxHealth: 3
   iFrameActive: 0
   iFrameDuration: 3
+  healthDisplay: {fileID: 0}
+  itemEquipped: 0
+  bulletSprites:
+  - {fileID: 7337332633604889950, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: -4126283536063120499, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: 7961374575644097364, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: 1050675656392233338, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: -5627518702309939818, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: 4654754540548683016, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: -9081506233475114905, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: 3817317653931168673, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
 --- !u!61 &6643301842052622346
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
     private ItemBase activeItem;
 
     // =========== Animations ===========
-    
 
     // =========== Components ===========
     private Rigidbody2D rb;
@@ -146,8 +145,8 @@ public class PlayerController : MonoBehaviour
             // Spawns bullet slightly in front of player
             Vector2 bulletPosition = rb.position + lookDirection * 0.5f;
 
+            // Creates bullet
             GameObject bullet = Instantiate(currentBulletPrefab, bulletPosition, Quaternion.identity);
-
             BulletBase bulletScript = bullet.GetComponent<BulletBase>();
 
             // Select correct sprite
@@ -159,6 +158,7 @@ public class PlayerController : MonoBehaviour
                 sr.sprite = bulletScript.bulletSprites[dirIndex];
             }
 
+            // Shoots bullet
             if (bulletScript != null)
             {
                 bulletScript.Launch(lookDirection);

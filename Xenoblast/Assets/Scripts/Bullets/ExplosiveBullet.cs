@@ -1,33 +1,41 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class ExplosiveBullet : BulletBase
 {
     // Blast Radius of 2f, Damage increased to 3
+    [Header("Explosive Bullet Settings")]
     [SerializeField] private float blastDuration = 0.05f;
     [SerializeField] private float blastRadius = 2f;
-    [SerializeField] private CircleCollider2D impactCollider; // Collider to check initial impact with Enemy
-    [SerializeField] private CircleCollider2D blastCollider; // Larger Collider that contains the blast area
-     [SerializeField] private SpriteRenderer spriteRenderer;
     public string blastSFXName;
     private bool hitEnemy = false;
 
+    public GameObject explosionPrefab;
+
+
+    [Header("Components")]
+    [SerializeField] private CircleCollider2D impactCollider; // Collider to check initial impact with Enemy
+    [SerializeField] private CircleCollider2D blastCollider; // Larger Collider that contains the blast area
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
+    
     protected override void Awake()
     {
+        // Assigning SFX
         launchSFXName = "ExplosiveBulletLaunch";
         blastSFXName = "ExplosiveBulletBlast";
 
         blastCollider.enabled = false;
         blastCollider.radius = blastRadius;
-        
+
         base.Awake();
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         damage = 3;
         speed = 10f;
         duration = 3f;
-        
     }
 
     public override void Launch(Vector2 direction)
@@ -42,12 +50,19 @@ public class ExplosiveBullet : BulletBase
         {
             Explode();
         }
-
     }
 
     private void Explode()
     {
+        // Explosion SFX
         AudioManager.Instance.PlaySFX(blastSFXName);
+
+        // Explosion animation
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+        // Destroys Explosion GameObject when animation is done
+        float animLength = explosion.GetComponent<Animator>().runtimeAnimatorController.animationClips[0].length;
+        Destroy(explosion, animLength);
 
         // Enables blast collider to damage nearby enemies when bullet hits an enemy
         hitEnemy = true;
@@ -58,13 +73,14 @@ public class ExplosiveBullet : BulletBase
 
         // Hide bullet sprite
         if (spriteRenderer != null)
+        {
             spriteRenderer.enabled = false;
-
+        }
+        
         // Disable impact collider so it doesn't re-trigger
         impactCollider.enabled = false;
 
         Destroy(gameObject, blastDuration);
-
     }
 
 }

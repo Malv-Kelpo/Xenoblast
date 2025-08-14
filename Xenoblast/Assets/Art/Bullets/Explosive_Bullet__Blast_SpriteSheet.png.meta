@@ -1,0 +1,418 @@
+fileFormatVersion: 2
+guid: 6267c0ec1c68a4b079a3e132ea2e92c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2311995895013859127
+    second: Explosive_Bullet__Blast_SpriteSheet_0
+  - first:
+      213: -1048024090308587291
+    second: Explosive_Bullet__Blast_SpriteSheet_1
+  - first:
+      213: -7526632816672519590
+    second: Explosive_Bullet__Blast_SpriteSheet_2
+  - first:
+      213: 6542270488218171629
+    second: Explosive_Bullet__Blast_SpriteSheet_3
+  - first:
+      213: -5503466474644982014
+    second: Explosive_Bullet__Blast_SpriteSheet_4
+  - first:
+      213: 2061279010752177960
+    second: Explosive_Bullet__Blast_SpriteSheet_5
+  - first:
+      213: -7955246910503198666
+    second: Explosive_Bullet__Blast_SpriteSheet_6
+  - first:
+      213: 6265633572468322283
+    second: Explosive_Bullet__Blast_SpriteSheet_7
+  - first:
+      213: -549553357332978091
+    second: Explosive_Bullet__Blast_SpriteSheet_8
+  - first:
+      213: 7283150542350051410
+    second: Explosive_Bullet__Blast_SpriteSheet_9
+  - first:
+      213: -5128370659802374704
+    second: Explosive_Bullet__Blast_SpriteSheet_10
+  - first:
+      213: -3096312872953451587
+    second: Explosive_Bullet__Blast_SpriteSheet_11
+  - first:
+      213: 698853554610438219
+    second: Explosive_Bullet__Blast_SpriteSheet_12
+  - first:
+      213: -8784033903956750127
+    second: Explosive_Bullet__Blast_SpriteSheet_13
+  - first:
+      213: -4346752912299266070
+    second: Explosive_Bullet__Blast_SpriteSheet_14
+  - first:
+      213: 2638484677751182453
+    second: Explosive_Bullet__Blast_SpriteSheet_15
+  - first:
+      213: -5201588110764064794
+    second: Explosive_Bullet__Blast_SpriteSheet_16
+  - first:
+      213: -4360252212334764328
+    second: Explosive_Bullet__Blast_SpriteSheet_17
+  - first:
+      213: 5379275985459930860
+    second: Explosive_Bullet__Blast_SpriteSheet_18
+  - first:
+      213: 359293357186096466
+    second: Explosive_Bullet__Blast_SpriteSheet_19
+  - first:
+      213: -6757964287603848810
+    second: Explosive_Bullet__Blast_SpriteSheet_20
+  - first:
+      213: -824594042959527079
+    second: Explosive_Bullet__Blast_SpriteSheet_21
+  - first:
+      213: 8139438321246555932
+    second: Explosive_Bullet__Blast_SpriteSheet_22
+  - first:
+      213: 2086996817933415396
+    second: Explosive_Bullet__Blast_SpriteSheet_23
+  - first:
+      213: -4803308268481957586
+    second: Explosive_Bullet__Blast_SpriteSheet_24
+  - first:
+      213: -7950180137792726702
+    second: Explosive_Bullet__Blast_SpriteSheet_25
+  - first:
+      213: 3017122112647059218
+    second: Explosive_Bullet__Blast_SpriteSheet_26
+  - first:
+      213: -4138335806353898280
+    second: Explosive_Bullet__Blast_SpriteSheet_27
+  - first:
+      213: 4179649486383095042
+    second: Explosive_Bullet__Blast_SpriteSheet_28
+  - first:
+      213: -5344918788119289882
+    second: Explosive_Bullet__Blast_SpriteSheet_29
+  - first:
+      213: -4940158623324303451
+    second: Explosive_Bullet__Blast_SpriteSheet_30
+  - first:
+      213: 1870108903411204995
+    second: Explosive_Bullet__Blast_SpriteSheet_31
+  - first:
+      213: -8659199423604229824
+    second: Explosive_Bullet__Blast_SpriteSheet_32
+  - first:
+      213: -6633633836440228330
+    second: Explosive_Bullet__Blast_SpriteSheet_33
+  - first:
+      213: -7363930371330473959
+    second: Explosive_Bullet__Blast_SpriteSheet_34
+  - first:
+      213: -7383752402102602271
+    second: Explosive_Bullet__Blast_SpriteSheet_35
+  - first:
+      213: 3757560735114339728
+    second: Explosive_Bullet__Blast_SpriteSheet_36
+  - first:
+      213: 2412065708883331946
+    second: Explosive_Bullet__Blast_SpriteSheet_37
+  - first:
+      213: 4359496060563225227
+    second: Explosive_Bullet__Blast_SpriteSheet_38
+  - first:
+      213: 2137957631912757488
+    second: Explosive_Bullet__Blast_SpriteSheet_39
+  - first:
+      213: -8656049534588540336
+    second: Explosive_Bullet__Blast_SpriteSheet_40
+  - first:
+      213: -2818997287913749483
+    second: Explosive_Bullet__Blast_SpriteSheet_41
+  - first:
+      213: 2339877755931044047
+    second: Explosive_Bullet__Blast_SpriteSheet_42
+  - first:
+      213: -629360294620995747
+    second: Explosive_Bullet__Blast_SpriteSheet_43
+  - first:
+      213: 3165779248913414713
+    second: Explosive_Bullet__Blast_SpriteSheet_44
+  - first:
+      213: -8478393786326454004
+    second: Explosive_Bullet__Blast_SpriteSheet_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 18
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Explosive_Bullet__Blast_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f567c540cd51020800000000000000
+      internalID: 2311995895013859127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Bullet__Blast_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0da1d74aba471f0800000000000000
+      internalID: -1048024090308587291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Bullet__Blast_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5acf6fb4570c8790800000000000000
+      internalID: -7526632816672519590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Bullet__Blast_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8f3cab850daca50800000000000000
+      internalID: 6542270488218171629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Bullet__Blast_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 207b3816662cf93b0800000000000000
+      internalID: -5503466474644982014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Bullet__Blast_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8272ad2d6522b9c10800000000000000
+      internalID: 2061279010752177960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosive_Bullet__Blast_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630eee66519499190800000000000000
+      internalID: -7955246910503198666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2c3006c99162f4434b4981dc6df67f33
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Explosive_Bullet__Blast_SpriteSheet_0: 2311995895013859127
+      Explosive_Bullet__Blast_SpriteSheet_1: -1048024090308587291
+      Explosive_Bullet__Blast_SpriteSheet_2: -7526632816672519590
+      Explosive_Bullet__Blast_SpriteSheet_3: 6542270488218171629
+      Explosive_Bullet__Blast_SpriteSheet_4: -5503466474644982014
+      Explosive_Bullet__Blast_SpriteSheet_5: 2061279010752177960
+      Explosive_Bullet__Blast_SpriteSheet_6: -7955246910503198666
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

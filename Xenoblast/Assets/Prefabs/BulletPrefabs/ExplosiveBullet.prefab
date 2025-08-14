@@ -162,10 +162,12 @@ MonoBehaviour:
   - {fileID: -7196052467844415175, guid: 60692a1f196fa45c38f00636fb6cf71b, type: 3}
   blastDuration: 0.2
   blastRadius: 2
+  blastSFXName: ExplosiveBulletBlast
+  explosionPrefab: {fileID: 7127322334321643426, guid: 2f580ed75d71f4219b856b7477a95a8a, type: 3}
   impactCollider: {fileID: 8729264698647378244}
   blastCollider: {fileID: 400388322102527594}
   spriteRenderer: {fileID: 3924291339307759611}
-  blastSFXName: ExplosiveBulletBlast
+  animator: {fileID: 0}
 --- !u!212 &3924291339307759611
 SpriteRenderer:
   m_ObjectHideFlags: 0

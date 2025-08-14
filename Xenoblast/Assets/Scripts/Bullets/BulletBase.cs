@@ -9,6 +9,9 @@ public abstract class BulletBase : MonoBehaviour
     [SerializeField] protected float duration;
     public string launchSFXName;
 
+    // Order: Up, Up-Left, Left, Down-Left, Down, Down-Right, Right, Up-Right
+    public Sprite[] bulletSprites;
+
     protected Rigidbody2D rb;
 
     protected virtual void Awake()

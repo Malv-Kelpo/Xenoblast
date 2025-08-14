@@ -113,7 +113,16 @@ MonoBehaviour:
   damage: 0
   speed: 10
   duration: 5
-  launchSFXName: 
+  launchSFXName: DefaultBullet
+  bulletSprites:
+  - {fileID: 7337332633604889950, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: -4126283536063120499, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: 7961374575644097364, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: 1050675656392233338, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: -5627518702309939818, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: 4654754540548683016, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: -9081506233475114905, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
+  - {fileID: 3817317653931168673, guid: a21fe1df14d5e40258cf6dd0432361e7, type: 3}
 --- !u!212 &3520871962626665297
 SpriteRenderer:
   m_ObjectHideFlags: 0

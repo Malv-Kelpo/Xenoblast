@@ -32,10 +32,8 @@ public class PlayerController : MonoBehaviour
     private float itemTimer = 0f;
     private ItemBase activeItem;
 
-    // =========== Sprites ===========
-    [Header("Sprites")]
-    // Order: Up, Up-Left, Left, Down-Left, Down, Down-Right, Right, Up-Right
-    public Sprite[] bulletSprites;
+    // =========== Animations ===========
+    
 
     // =========== Components ===========
     private Rigidbody2D rb;
@@ -150,16 +148,16 @@ public class PlayerController : MonoBehaviour
 
             GameObject bullet = Instantiate(currentBulletPrefab, bulletPosition, Quaternion.identity);
 
+            BulletBase bulletScript = bullet.GetComponent<BulletBase>();
+
             // Select correct sprite
             SpriteRenderer sr = bullet.GetComponent<SpriteRenderer>();
             int dirIndex = GetDirectionIndex(lookDirection);
 
-            if (sr != null && bulletSprites.Length == 8)
+            if (sr != null && bulletScript.bulletSprites.Length == 8)
             {
-                sr.sprite = bulletSprites[dirIndex];
+                sr.sprite = bulletScript.bulletSprites[dirIndex];
             }
-
-            BulletBase bulletScript = bullet.GetComponent<BulletBase>();
 
             if (bulletScript != null)
             {

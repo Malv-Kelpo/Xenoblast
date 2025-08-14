@@ -30,6 +30,7 @@ public class PauseMenu : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
+        AudioManager.Instance.StopMusic("GameTheme");
         SceneManager.LoadScene("MainMenu");
     }
 

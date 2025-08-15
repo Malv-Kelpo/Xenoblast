@@ -3,12 +3,14 @@ using UnityEngine;
 
 public abstract class ItemBase : MonoBehaviour
 {
+    // ========= Item Stats =========
     [Header("Item Stats")]
     [SerializeField] public string itemLabel;
     [SerializeField] public float itemAbilityDuration;
     [SerializeField] public float itemDespawnDuration = 10f;
     private float itemDespawnTimer = 0f;
 
+    // ========= Player =========
     [Header("Player")]
     [SerializeField] protected PlayerController player;
 

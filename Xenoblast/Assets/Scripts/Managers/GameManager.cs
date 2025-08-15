@@ -24,11 +24,19 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        AudioManager.Instance.PlayMusic("GameTheme");
     }
 
     private void Start()
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayMusic("GameTheme");
+        }
+        else
+        {
+            Debug.LogWarning("AudioManager not found in scene when starting GameManager.");
+        }
+        
         UpdateScoreUI();    
     }
 

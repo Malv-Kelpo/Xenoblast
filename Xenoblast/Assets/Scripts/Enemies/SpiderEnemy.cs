@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class SpiderEnemy : EnemyBase
 {
+    // ==============================================================
     // Increased Speed of 4f, Zig-Zag Movement
+    // ==============================================================
 
     [Header("Movement Settings")]
     [SerializeField] private float zigZagDuration = 0.75f;

@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class ExplosiveBullet : BulletBase
 {
-    // Blast Radius of 2f, Damage increased to 3
+    // ==============================================================
+    // Explosive Bullet: Blast Radius of 2f, Damage increased to 3
+    // ==============================================================
+
+    // ========= Explosive Bullet Settings =========
     [Header("Explosive Bullet Settings")]
     [SerializeField] private float blastDuration = 0.05f;
     [SerializeField] private float blastRadius = 2f;
@@ -12,7 +16,7 @@ public class ExplosiveBullet : BulletBase
 
     public GameObject explosionPrefab;
 
-
+    // ========= Components =========
     [Header("Components")]
     [SerializeField] private CircleCollider2D impactCollider; // Collider to check initial impact with Enemy
     [SerializeField] private CircleCollider2D blastCollider; // Larger Collider that contains the blast area

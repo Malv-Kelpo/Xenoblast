@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class TankEnemy : EnemyBase
 {
+    // ==============================================================
     // Slower Speed of 1.5f, Increased Health of 3
+    // ==============================================================
 
     protected override void Awake()
     {
